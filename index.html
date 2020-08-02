@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1> Welcome to the Guess the Number Game!</h1>
+    <div id="app">
+      {{ message }}
+      <p><button v-on:click="pickNumber()">Generate Number</button></p>
+      <!-- take in user input -->
+      <p>Enter your guess here: <input type="text" v-model="userGuess"></p>
+      <!-- annalyze number to see if it's correct, higher, or lower than answer -->
+      <p><button v-on:click="analyzeGuess()">Submit Guess</button></p>
+      <!-- provide feedback to user -->
+      <p>{{ userFeedback }}</p>
+      <!-- allow them to guess again until correct -->
+    </div>
+  </body>
+</html>
